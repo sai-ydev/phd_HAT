@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.1">
+<eagle version="9.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -10136,6 +10136,7 @@ with different sets of drill holes or mounting pads</description>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J6" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_04" device="SCREW" package3d_urn="urn:adsk.eagle:package:38090/1"/>
 <part name="SUPPLY11" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
+<part name="C10" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="10UF-POLAR" device="-EIA3216-16V-10%(TANT)" package3d_urn="urn:adsk.eagle:package:37418/1" value="10uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -10337,6 +10338,10 @@ with different sets of drill holes or mounting pads</description>
 <instance part="SUPPLY11" gate="G$1" x="238.76" y="154.94" smashed="yes">
 <attribute name="VALUE" x="238.76" y="157.734" size="1.016" layer="96" font="vector" ratio="20" align="bottom-center"/>
 </instance>
+<instance part="C10" gate="G$1" x="53.086" y="53.594" smashed="yes">
+<attribute name="NAME" x="54.102" y="54.229" size="1.016" layer="95" font="vector" ratio="20"/>
+<attribute name="VALUE" x="54.102" y="49.403" size="1.016" layer="96" font="vector" ratio="20"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -10431,6 +10436,9 @@ with different sets of drill holes or mounting pads</description>
 <pinref part="J3" gate="G$1" pin="S"/>
 <wire x1="27.94" y1="53.34" x2="30.48" y2="53.34" width="0.1524" layer="91"/>
 <junction x="30.48" y="53.34"/>
+<pinref part="C10" gate="G$1" pin="-"/>
+<wire x1="53.086" y1="48.514" x2="53.086" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="53.086" y1="43.18" x2="45.72" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U3" gate="G$1" pin="GND"/>
@@ -10745,7 +10753,8 @@ with different sets of drill holes or mounting pads</description>
 <segment>
 <pinref part="Q2" gate="G$1" pin="S"/>
 <pinref part="SUPPLY8" gate="G$1" pin="VIN"/>
-<wire x1="48.26" y1="58.42" x2="58.42" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="58.42" x2="53.086" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="53.086" y1="58.42" x2="58.42" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="58.42" x2="58.42" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="U3" gate="G$1" pin="IN"/>
 <wire x1="76.2" y1="55.88" x2="71.12" y2="55.88" width="0.1524" layer="91"/>
@@ -10767,6 +10776,9 @@ with different sets of drill holes or mounting pads</description>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="58.42" y1="17.78" x2="58.42" y2="20.32" width="0.1524" layer="91"/>
 <junction x="58.42" y="20.32"/>
+<pinref part="C10" gate="G$1" pin="+"/>
+<wire x1="53.086" y1="56.134" x2="53.086" y2="58.42" width="0.1524" layer="91"/>
+<junction x="53.086" y="58.42"/>
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="1"/>
